@@ -6,20 +6,28 @@ from azure.core.credentials import AzureKeyCredential
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 from pathlib import Path
-load_dotenv(dotenv_path=Path(__file__).resolve().parent.parent / ".env")
-
-# === 🔐 Lade Umgebungsvariablen ===
-# Load .env if it exists (for local use or streamlit secrets)
+#Load .env if it exists (for local use or streamlit secrets)
 dotenv_path = Path(__file__).resolve().parent.parent / ".env"
 if dotenv_path.exists():
     load_dotenv(dotenv_path=dotenv_path)
+else:
+    print(f"⚠️ No .env file found at {dotenv_path}. Relying on Streamlit secrets...")
+
+# === 🔑 Load credentials: First from environment (.env), then from st.secrets ===
+form_endpoint   = os.getenv("form_endpoint")     or st.secrets.get("form_endpoint")
+form_key        = os.getenv("form_key")          or st.secrets.get("form_key")
+openai_key      = os.getenv("openai_key")        or st.secrets.get("openai_key")
+openai_endpoint = os.getenv("openai_endpoint")   or st.secrets.get("openai_endpoint")
+openai_version  = os.getenv("openai_version")    or st.secrets.get("openai_version")
+deployment_name = os.getenv("deployment_name")   or st.secrets.get("deployment_name")
+
 
 # Secure config fallback: Local (.env) → Cloud (st.secrets)
 form_endpoint     = os.getenv("form_endpoint")     or st.secrets.get("form_endpoint")
 form_key          = os.getenv("form_key")          or st.secrets.get("form_key")
 openai_key        = os.getenv("openai_key")        or st.secrets.get("openai_key")
 openai_endpoint   = os.getenv("openai_endpoint")   or st.secrets.get("openai_endpoint")
-openai_version    = os.getenv("openai_version")    or st.secrets.get("openai_version")
+#openai_version    = os.getenv("openai_version")    or st.secrets.get("openai_version")
 deployment_name   = os.getenv("deployment_name")   or st.secrets.get("deployment_name")
 
 
