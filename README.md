@@ -1,3 +1,6 @@
+# azure-ocr-Deutsche-Steuer-analyse
+OCR-basiertes Tool zur steuerlichen Analyse deutscher Rechnungen mit Azure Form Recognizer und GPT“
+
 # 1. open VS and Drop & Drag Github Folder
 
 # 1. setup your virtual environment
@@ -36,3 +39,7 @@ setup.sh (macOS-kompatibel) some packages can not installed by requirments.txt ,
 | LLM-Modell (local/cloud)  | `OpenAI GPT`, `Mistral`, `LLama.cpp`  | Antwort generieren                          |
 | UI oder API               | `Streamlit`, `FastAPI`, `Gradio`      | Nutzerinterface / Abfrage                   |
 | Dokumentenquelle          | `PDF`, `HTML`, `txt`, OCR             | EStG, BMF-Schreiben, Urteile, Rechnungen    |
+=======
+# azure-ocr-Deutsche-Steuer-analyse
+OCR-basiertes Tool zur steuerlichen Analyse deutscher Rechnungen mit Azure Form Recognizer und GPT“
+>>>>>>> b587bdaafbdf8d056220456081b379b5ac8427cb
