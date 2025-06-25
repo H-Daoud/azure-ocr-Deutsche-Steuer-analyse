@@ -16,6 +16,9 @@ ENV/
 *.env
 .env.*
 
+# Streamlit secrets
+.streamlit/secrets.toml
+
 # === IDEs ===
 .vscode/
 .idea/
