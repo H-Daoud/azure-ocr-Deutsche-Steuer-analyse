@@ -1,4 +1,77 @@
 # Byte-compiled / optimized / DLL files
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.log
+
+# === Environments ===
+.venv/
+venv/
+env/
+ENV/
+*.env
+.env.*
+
+# === IDEs ===
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# === OS-generated ===
+.DS_Store
+Thumbs.db
+
+# === Jupyter & Notebooks ===
+.ipynb_checkpoints/
+
+# === Output / Artifacts ===
+dist/
+build/
+*.egg-info/
+*.sqlite3
+*.db
+*.bak
+*.tmp
+
+# === PDF/Image OCR project ===
+*.pdf
+*.jpg
+*.png
+*.tiff
+*.jpeg
+*.svg
+
+# === Streamlit ===
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# === Git sensitive files ===
+*.pem
+*.key
+*.crt
+
+# === Logs, reports ===
+logs/
+*.log
+*.gz
+*.zip
+*.tar
+
+# === Project-specific ===
+# Avoid accidentally uploading sample inputs or invoices
+data/test_invoices/
+data/private_documents/
+outputs/
+cache/
+
+# === VS Code debugging ===
+*.code-workspace
+
 __pycache__/
 *.py[cod]
 *$py.class
