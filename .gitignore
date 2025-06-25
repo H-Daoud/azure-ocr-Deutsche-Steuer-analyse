@@ -1,0 +1,67 @@
+# === Python Bytecode ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# === Virtual Environments ===
+.venv/
+venv/
+
+# === Environment Variables ===
+.env
+*.env
+
+# === macOS System Files ===
+.DS_Store
+
+# === IDE Config ===
+.vscode/
+.idea/
+
+# === Logs ===
+*.log
+
+# === Output & Cache ===
+*.out
+*.tmp
+*.bak
+.cache/
+output/
+outputs/
+__outputs__/
+tmp/
+
+# === PDFs & Invoices (optional if local test files) ===
+*.pdf
+*.jpg
+*.jpeg
+*.png
+
+# === Streamlit Specific ===
+.streamlit/config.toml
+
+# === Chroma / FAISS Vector DBs ===
+chroma_db/
+chroma/
+faiss_index/
+index.faiss
+index.pkl
+
+# === Notebook Checkpoints ===
+.ipynb_checkpoints/
+
+# === pyproject.lock & builds ===
+*.egg-info/
+dist/
+build/
+
+# === Coverage / Testing ===
+htmlcov/
+coverage.xml
+*.cover
+
+# === MyPy / Pyright / Pylint Reports ===
+.mypy_cache/
+.pyright/
+pylint-report.txt
+
