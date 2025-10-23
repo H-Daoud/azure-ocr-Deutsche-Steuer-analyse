@@ -1,14 +1,18 @@
+import streamlit as st  # must be imported first
+
+# === 📋 Streamlit UI ===
+st.set_page_config(
+    page_title="Einkommensteuer Assistent (Using AI Azure Tool and OpenAI API)",
+    page_icon="🧾"
+)
+
 import os
 import tempfile
-import streamlit as st
 from azure.ai.formrecognizer import DocumentAnalysisClient
 from azure.core.credentials import AzureKeyCredential
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 from pathlib import Path
-
-# === 📋 Streamlit UI ===
-st.set_page_config(page_title="Einkommensteuer Assistent (Using AI Azure Tool and OpenAI API)", page_icon="🧾")
 
 #Load .env if it exists (for local use or streamlit secrets)
 dotenv_path = Path(__file__).resolve().parent.parent / ".env"
