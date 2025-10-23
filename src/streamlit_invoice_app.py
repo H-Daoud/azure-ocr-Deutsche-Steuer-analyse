@@ -7,11 +7,6 @@ from openai import AzureOpenAI
 from dotenv import load_dotenv
 from pathlib import Path
 
-# --- Streamlit UI setup ---
-st.set_page_config(page_title="Entscheidungsanalyse", layout="wide")
-st.title("🚆 Deutsche Bahn-Company Brain🧠\nEntscheidungsfeedback anhand der Unternehmensdatenbank")
-
-
 #Load .env if it exists (for local use or streamlit secrets)
 dotenv_path = Path(__file__).resolve().parent.parent / ".env"
 if dotenv_path.exists():
