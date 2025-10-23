@@ -6,6 +6,10 @@ from azure.core.credentials import AzureKeyCredential
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 from pathlib import Path
+
+# === 📋 Streamlit UI ===
+st.set_page_config(page_title="Einkommensteuer Assistent (Using AI Azure Tool and OpenAI API)", page_icon="🧾")
+
 #Load .env if it exists (for local use or streamlit secrets)
 dotenv_path = Path(__file__).resolve().parent.parent / ".env"
 if dotenv_path.exists():
@@ -31,8 +35,6 @@ openai_endpoint   = os.getenv("openai_endpoint")   or st.secrets.get("openai_end
 deployment_name   = os.getenv("deployment_name")   or st.secrets.get("deployment_name")
 
 
-# === 📋 Streamlit UI ===
-st.set_page_config(page_title="Rechnungsanalyse (Using Azure OCR + OpenAI API)")
 
 uploaded_file = st.file_uploader("Lade eine Rechnung hoch (PDF oder Bild)", type=["pdf", "png", "jpg", "jpeg"])
 
