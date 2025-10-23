@@ -39,8 +39,9 @@ st.set_page_config(
     page_icon="🧾",
     layout="wide"
 )
-st.title("📄 Einkommensteuer Assistent 🧾: Rechnungen einfach analysieren und Rückerstattung prüfen")
+st.title("Einkommensteuer Assistent 🧾")
 
+st.subheader("Rechnungen einfach analysieren und Rückerstattung prüfen")
 
 
 
