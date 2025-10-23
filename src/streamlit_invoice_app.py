@@ -39,7 +39,7 @@ st.set_page_config(
     page_icon="🧾",
     layout="wide"
 )
-st.title("🏦 Einkommensteuer Assistent")
+st.title("🏦 Einkommensteuer Assistent using Azure AI Tools and OpenAI APIs")
 
 st.subheader("📊 Rechnungen einfach analysieren und Rückerstattung prüfen")
 
