@@ -44,7 +44,11 @@ st.title("📄 Einkommensteuer Assistent 🧾\nRechnungen einfach analysieren un
 
 
 
-uploaded_file = st.file_uploader("Lade eine Rechnung hoch (PDF oder Bild)", type=["pdf", "png", "jpg", "jpeg"])
+uploaded_file = st.file_uploader(
+    label="📥 Lade hier deine Rechnung oder Beleg hoch zur Prüfung auf Steuererstattung (PDF oder Bild)",
+    type=["pdf", "png", "jpg", "jpeg"]
+)
+
 
 if uploaded_file:
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
