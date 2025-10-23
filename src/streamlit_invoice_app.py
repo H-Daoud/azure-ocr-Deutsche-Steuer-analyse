@@ -32,8 +32,7 @@ deployment_name   = os.getenv("deployment_name")   or st.secrets.get("deployment
 
 
 # === 📋 Streamlit UI ===
-st.set_page_config(page_title="Rechnungsanalyse", layout="wide")
-st.title("🧾 Automatische Rechnungsauswertung (OCR + GPT)")
+st.set_page_config(page_title="Rechnungsanalyse (Using Azure OCR + OpenAI API)")
 
 uploaded_file = st.file_uploader("Lade eine Rechnung hoch (PDF oder Bild)", type=["pdf", "png", "jpg", "jpeg"])
 
@@ -65,7 +64,7 @@ if uploaded_file:
 
         st.subheader("🤖 Steuerliche Bewertung")
 
-        with st.spinner("Analysiere mit GPT..."):
+        with st.spinner("Analysiere mit OPEN AI..."):
             prompt = f"""
 Du bist ein erfahrener deutscher Steuerberater.
 
