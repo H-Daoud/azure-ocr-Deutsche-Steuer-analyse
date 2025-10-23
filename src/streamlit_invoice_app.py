@@ -7,6 +7,11 @@ from openai import AzureOpenAI
 from dotenv import load_dotenv
 from pathlib import Path
 
+# --- Streamlit UI setup ---
+st.set_page_config(page_title="Entscheidungsanalyse", layout="wide")
+st.title("🚆 Deutsche Bahn-Company Brain🧠\nEntscheidungsfeedback anhand der Unternehmensdatenbank")
+
+
 #Load .env if it exists (for local use or streamlit secrets)
 dotenv_path = Path(__file__).resolve().parent.parent / ".env"
 if dotenv_path.exists():
@@ -31,11 +36,18 @@ openai_endpoint   = os.getenv("openai_endpoint")   or st.secrets.get("openai_end
 #openai_version    = os.getenv("openai_version")    or st.secrets.get("openai_version")
 deployment_name   = os.getenv("deployment_name")   or st.secrets.get("deployment_name")
 
-# === 📋 Streamlit UI ===
+# --- Streamlit UI setup ---
+import streamlit as st
+
 st.set_page_config(
-    page_title="Einkommensteuer Assistent (Using AI Azure Tool and OpenAI API)",
-    page_icon="🧾"
+    page_title="Einkommensteuer Assistent",  # browser tab
+    page_icon="🧾",
+    layout="wide"
 )
+st.title("📄 Einkommensteuer Assistent 🧾\nRechnungen einfach analysieren und Rückerstattung prüfen")
+
+
+
 
 uploaded_file = st.file_uploader("Lade eine Rechnung hoch (PDF oder Bild)", type=["pdf", "png", "jpg", "jpeg"])
 
@@ -60,7 +72,7 @@ if uploaded_file:
             line.content for page in result.pages for line in page.lines
         )
 
-        # === GPT-Analyse vorbereiten ===
+        # === -Analyse vorbereiten ===
         st.success("✅ OCR abgeschlossen.")
         st.subheader("📄 Extrahierter Text:")
         st.text_area("OCR-Text", invoice_text, height=300)
