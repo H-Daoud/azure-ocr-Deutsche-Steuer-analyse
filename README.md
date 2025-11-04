@@ -1,5 +1,5 @@
 # azure-ocr-Deutsche-Steuer-analyse
-OCR-basiertes Tool zur steuerlichen Analyse deutscher Rechnungen mit Azure Form Recognizer und GPT“
+OCR-basiertes Tool zur steuerlichen Analyse deutscher Rechnungen mit Azure Form Recognizer und OpenAI API“
 
 # 1. open VS and Drop & Drag Github Folder
 
